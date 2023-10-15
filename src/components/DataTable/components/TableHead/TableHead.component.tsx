@@ -7,8 +7,8 @@ const TableHead = <T extends Record<string, any>>({
 }: TableHeadProps<T>): JSX.Element => (
   <thead>
     <tr>
-      {columns.map((column) => (
-        <th key={column.columnName}>{column.columnName}</th>
+      {columns.map(({ columnName }) => (
+        <th key={columnName}>{columnName}</th>
       ))}
     </tr>
   </thead>

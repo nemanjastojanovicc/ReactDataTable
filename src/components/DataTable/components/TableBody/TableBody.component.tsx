@@ -1,7 +1,7 @@
 import { DataTableProps } from "components/DataTable/DataTable.component";
-import { renderCellContent } from "./utils";
+import { renderCell } from "./utils";
 
-const TableRows = <T extends Record<string, any>>({
+const TableBody = <T extends Record<string, any>>({
   columns,
   data,
 }: DataTableProps<T>): JSX.Element => (
@@ -9,11 +9,11 @@ const TableRows = <T extends Record<string, any>>({
     {data.map((row) => (
       <tr key={row.id}>
         {columns.map((column) => (
-          <td key={column.columnName}>{renderCellContent<T>(row, column)}</td>
+          <td key={column.columnName}>{renderCell<T>(row, column)}</td>
         ))}
       </tr>
     ))}
   </tbody>
 );
 
-export default TableRows;
+export default TableBody;
