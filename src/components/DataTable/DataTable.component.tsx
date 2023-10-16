@@ -23,7 +23,7 @@ export type DataTableProps<T> = {
  *
  * @returns {JSX.Element} - A JSX element representing the rendered table.
  *
- * See more on: ...
+ * See more: https://medium.com/@stojanovic.nemanja71/use-simple-approach-to-create-data-table-in-react-f17c023d2ea2
  *
  */
 const DataTable = <T extends Record<string, any>>({
